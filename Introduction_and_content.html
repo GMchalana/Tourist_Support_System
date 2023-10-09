@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Introduction and content</title>
+<style>
+body {
+  background-image:url(7.jpg);
+  background-size:1550px 850px;
+}
+
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#block01 {background-color: LimeGreen;}
+#block02 {background-color: ForestGreen;}
+#block03 {background-color: MediumSeaGreen;}
+#block04 {background-color: green;}
+
+button {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 32px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+</style>
+</head>
+<body>
+  <br>
+  <button type="button" onclick="myFunction()">Home</button>
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>><br><br><br><br><br><br><br><br><br>
+
+
+
+
+<button class="tablink" onclick="openPage('block01', this, 'LimeGreen')">Introduction</button>
+<button class="tablink" onclick="openPage('block02', this, 'ForestGreen')" id="defaultOpen">Why Sri Lanka is important as a tourist destination</button>
+<button class="tablink" onclick="openPage('block03', this, 'MediumSeaGreen')">Major tourist destinations in Sri Lanka </button>
+<button class="tablink" onclick="openPage('block04', this, 'green')">Special Contact Details</button>
+
+<div id="block01" class="tabcontent">
+  <p style="font-size: 25px;color:black">
+    The government initiatives in development of tourism date back to 1937 when the Ceylon Tourist Bureau was established.
+     However, it was closed down in September 1939 due to World War II. After Sri Lanka's independence the promotion of 
+     tourism was again considered by re-establishing the Ceylon Tourist Board which took over the function of the Tourist Bureau.
+     In 1965, J. R. Jayewardene as Minister of State initiated the first major development of the tourism industry with the 
+     Ceylon Tourist Board Act No 10 of 1966 and the Ceylon Hotels Corporation Act No 14 of 1966, which formed the Ceylon Tourist 
+     Board and the Ceylon Hotels Corporation. Since then the Ceylon Tourist Board has functioned as the state agency, 
+     responsible for development and promotion of the tourism sector in Sri Lanka. Ceylon Hotels Corporation paved the way 
+     government investments build hotels needed to attract tourist. In October 2007 according to Section 2 of the Tourism 
+     Act No. 38 of 2005, the Sri Lanka Tourist Board (Act No 10 of 1966) was replaced by the Sri Lanka Tourism Development 
+     Authority (SLTDA). Currently Sri Lanka Tourism Development Authority has classified Sri Lanka into several resort
+      regions suitable for tourism development.
+  </p>
+  <img src="15.png" width="1450" height="1000">
+</div>
+
+<div id="block02" class="tabcontent">
+<p style="font-size: 25px">
+  One of the most interesting aspects of Sri Lanka's tourism industry is the beautiful natural environment of Sri Lanka. 
+  This is mainly due to the large variety of climates within a very short range. The coastal areas, the hilly areas in 
+  the middle of the country, the kingdom of Anuradhapura a little above it, and the lowland Ratnapura areas are all great
+   places to experience beautiful ecosystems due to its unique climatic conditions.
+   <br>
+   Also, religious places in Sri Lanka should not be missed by a tourist. Because it is an experience that no other country has.
+    Also, there are many tourist places in Sri Lanka in the field of cultural sites, ancient constructions, etc.
+</p>  
+<img src="14.png"  width="1480" height="900">
+</div>
+
+<div id="block03" class="tabcontent">
+  <p>
+    <button type="button" onclick="myFunction1()">Sigiriya</button>
+    <button type="button" onclick="myFunction2()">Ella</button>
+    <button type="button" onclick="myFunction3()">Galle Fort</button>
+    <button type="button" onclick="myFunction4()">Adam's Peak</button> 
+    <button type="button" onclick="myFunction5()">Nuwara Eliya</button>
+    <button type="button" onclick="myFunction6()">Trincomalee</button>
+    <button type="button" onclick="myFunction7()">Ancient Anuradhapura</button>
+   </p>
+   <img src="17.jpg" width="1480" height="1480">
+  
+</div>
+
+<div id="block04" class="tabcontent">
+   <p style="font-size: 35px;font-family:Garamond">
+    Police Emergency Hotline	>>> 118 / 119<br><br>
+    Ambulance / Fire & rescue	>>> 110<br><br>
+    Accident Service-General Hospital-Colombo >>>	011-2691111<br><br>
+    Tourist Police >>> 011-2421052<br><br>
+    Police Emergency >>>	011-2433333<br><br>
+    Government Information Center >>>	1919<br><br>
+    Report Crimes	>>> 011-2691500<br><br>
+    Emergency Police Mobile Squad	>>> 011-5717171<br><br>
+    Fire & Ambulance Service	>>> 011-2422222<br><br>
+   </p>
+   
+ 
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+function myFunction()
+   {
+    window.location="home_page.html";
+    }
+
+    function myFunction1()
+   {
+    window.location="sigiriya.html";
+    }
+
+    function myFunction2()
+   {
+    window.location="ella.html";
+    }
+
+    function myFunction3()
+   {
+    window.location="gallefort.html";
+    }
+
+    function myFunction4()
+   {
+    window.location="sripadaya.html";
+    }
+
+    function myFunction5()
+   {
+    window.location="nuwaraeliya.html";
+    }
+
+    function myFunction6()
+   {
+    window.location="trinco.html";
+    }
+
+    function myFunction7()
+   {
+    window.location="anuradhapura.html";
+    }
+
+  
+</script>
+
+
+
+</body>
+</html>
