@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An Awesome Vuejs Course Todo App</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>My First Awesome Vue Project!</h1>
+        <hr>
+        <input type="text" v-model="newTask">
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        let myVue = new Vue({
+            el: '#app',
+            data: {
+                newTask: '',
+                tasks: []
+            }
+        });
+    </script>
+</body>
+</html>
